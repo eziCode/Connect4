@@ -444,424 +444,417 @@ def WinConditionsUser():
 
 def WinConditionsCpu():
     #Ways to win for CPU
-    print('Cpu moves = ', cpu_moves)
+    if 'A1' in user_moves and 'A2' in user_moves and 'A3' in user_moves and 'A4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
     
-    if 'A1' and 'A2' and 'A3' and 'A4' in cpu_moves:
-        gameOverCpu = True
+    elif 'A2' in user_moves and 'A3' in user_moves and 'A4' in user_moves and 'A5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A2' and 'A3' and 'A4' and 'A5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A3' in user_moves and 'A4' in user_moves and 'A5' in user_moves and 'A6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A3' and 'A4' and 'A5' and 'A6' in cpu_moves:
-        gameOverCpu = True
-        userTurn = False
-        cpuTurn = False
-        return True
-
-    elif 'B1' and 'B2' and 'B3' and 'B4' in cpu_moves:
-        gameOverCpu = True
+    elif 'B1' in user_moves and 'B2' in user_moves and 'B3' in user_moves and 'B4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
         
-    elif 'B2' and 'B3' and 'B4' and 'B5' in cpu_moves:
-        gameOverCpu = True
+    elif 'B2' in user_moves and 'B3' in user_moves and 'B4' in user_moves and 'B5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'B3' and 'B4' and 'B5' and 'B6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B3' in user_moves and 'B4' in user_moves and 'B5' in user_moves and 'B6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C1' and 'C2' and 'C3' and 'C4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C1' in user_moves and 'C2' in user_moves and 'C3' in user_moves and 'C4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C2' and 'C3' and 'C4' and 'C5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C2' in user_moves and 'C3' in user_moves and 'C4' in user_moves and 'C5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C3' and 'C4' and 'C5' and 'C6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C3' in user_moves and 'C4' in user_moves and 'C5' in user_moves and 'C6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D1' and 'D2' and 'D3' and 'D4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D1' in user_moves and 'D2' in user_moves and 'D3' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D2' and 'D3' and 'D4' and 'D5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D2' in user_moves and 'D3' in user_moves and 'D4' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D3' and 'D4' and 'D5' and 'D6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D3' in user_moves and 'D4' in user_moves and 'D5' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'E1' and 'E2' and 'E3' and 'E4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'E1' in user_moves and 'E2' in user_moves and 'E3' in user_moves and 'E4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'E2' and 'E3' and 'E4' and 'E5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'E2' in user_moves and 'E3' in user_moves and 'E4' in user_moves and 'E5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'E3' and 'E4' and 'E5' and 'E6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'E3' in user_moves and 'E4' in user_moves and 'E5' in user_moves and 'E6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'F1' and 'F2' and 'F3' and 'F4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'F1' in user_moves and 'F2' in user_moves and 'F3' in user_moves and 'F4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'F2' and 'F3' and 'F4' and 'F5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'F2' in user_moves and 'F3' in user_moves and 'F4' in user_moves and 'F5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'F3' and 'F4' and 'F5' and 'F6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'F3' in user_moves and 'F4'in user_moves and 'F5' in user_moves and 'F6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'G1' and 'G2' and 'G3' and 'G4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'G1' in user_moves and 'G2' in user_moves and 'G3' in user_moves and 'G4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'G2' and 'G3' and 'G4' and 'G5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'G2' in user_moves and 'G3' in user_moves and 'G4' in user_moves and 'G5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'G3' and 'G4' and 'G5' and 'G6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'G3' in user_moves and 'G4' in user_moves and 'G5' in user_moves and 'G6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A1' and 'B1' and 'C1' and 'D1' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A1' in user_moves and 'B1' in user_moves and 'C1' in user_moves and 'D1' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'B1' and 'C1' and 'D1' and 'E1' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B1' in user_moves and 'C1' in user_moves and 'D1' in user_moves and 'E1' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C1' and 'D1' and 'E1' and 'F1' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C1' in user_moves and 'D1' in user_moves and 'E1' in user_moves and 'F1' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D1' and 'E1' and 'F1' and 'G1' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D1' in user_moves and 'E1' in user_moves and 'F1' in user_moves and 'G1' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A2' and 'B2' and 'C2' and 'D2' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A2' in user_moves and 'B2' in user_moves and 'C2' in user_moves and 'D2' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'B2' and 'C2' and 'D2' and 'E2' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B2' in user_moves and 'C2' in user_moves and 'D2' in user_moves and 'E2' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C2' and 'D2' and 'E2' and 'F2' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C2' in user_moves and 'D2' in user_moves and 'E2' in user_moves and 'F2' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D2' and 'E2' and 'F2' and 'G2' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D2' in user_moves and 'E2' in user_moves and 'F2' in user_moves and 'G2' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A3' and 'B3' and 'C3' and 'D3' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A3' in user_moves and 'B3' in user_moves and 'C3' in user_moves and 'D3' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'B3' and 'C3' and 'D3' and 'E3' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B3' in user_moves and 'C3' in user_moves and 'D3' in user_moves and 'E3' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C3' and 'D3' and 'E3' and 'F3' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C3' in user_moves and 'D3' in user_moves and 'E3' in user_moves and 'F3' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D3' and 'E3' and 'F3' and 'G3' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D3' in user_moves and 'E3' in user_moves and 'F3' in user_moves and 'G3' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A4' and 'B4' and 'C4' and 'D4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A4' in user_moves and 'B4' in user_moves and 'C4' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'B4' and 'C4' and 'D4' and 'E4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B4' in user_moves and 'C4'in user_moves and 'D4' in user_moves and 'E4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C4' and 'D4' and 'E4' and 'F4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C4' in user_moves and 'D4' in user_moves and 'E4' in user_moves and 'F4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D4' and 'E4' and 'F4' and 'G4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D4' in user_moves and 'E4' in user_moves and 'F4' in user_moves and 'G4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A5' and 'B5' and 'C5' and 'D5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A5' in user_moves and 'B5' in user_moves and 'C5' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'B5' and 'C5' and 'D5' and 'E5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B5'in user_moves and 'C5' in user_moves and 'D5' in user_moves and 'E5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C5' and 'D5' and 'E5' and 'F5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C5' in user_moves and 'D5' in user_moves and 'E5' in user_moves and 'F5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D5' and 'E5' and 'F5' and 'G5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D5' in user_moves and 'E5' in user_moves and 'F5' in user_moves and 'G5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A6' and 'B6' and 'C6' and 'D6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A6' in user_moves and 'B6' in user_moves and 'C6' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
-        return True
-
-    elif 'B6' and 'C6' and 'D6' and 'E6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B6' in user_moves and 'C6' in user_moves and 'D6' in user_moves and 'E6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C6' and 'D6' and 'E6' and 'F6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C6' in user_moves and 'D6' in user_moves and 'E6' in user_moves and 'F6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D6' and 'E6' and 'F6' and 'G6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D6' in user_moves and 'E6' in user_moves and 'F6' in user_moves and 'G6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A1' and 'B2' and 'C3' and 'D4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A1' in user_moves and 'B2' in user_moves and 'C3' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'B2' and 'C3' and 'D4' and 'E5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B2' in user_moves and 'C3' in user_moves and 'D4' in user_moves and 'E5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C3' and 'D4' and 'E5' and 'F6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C3' in user_moves and 'D4' in user_moves and 'E5' in user_moves and 'F6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'B1' and 'C2' and 'D3' and 'E4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B1' in user_moves and 'C2' in user_moves and 'D3' in user_moves and 'E4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C2' and 'D3' and 'E4' and 'F5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C2' in user_moves and 'D3' in user_moves and 'E4' in user_moves and 'F5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D3' and 'E4' and 'F5' and 'G6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D3' in user_moves and 'E4' in user_moves and 'F5' in user_moves and 'G6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'C1' and 'D2' and 'E3' and 'F4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'C1' in user_moves and 'D2' in user_moves and 'E3' in user_moves and 'F4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D2' and 'E3' and 'F4' and 'G5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D2' in user_moves and 'E3' in user_moves and 'F4' in user_moves and 'G5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D1' and 'E2' and 'F3' and 'G4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D1' in user_moves and 'E2' in user_moves and 'F3' in user_moves and 'G4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A2' and 'B3' and 'C4' and 'D5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A2' in user_moves and 'B3' in user_moves and 'C4' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'B3' and 'C4' and 'D5' and 'E6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'B3' in user_moves and 'C4' in user_moves and 'D5' in user_moves and 'E6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'A3' and 'B4' and 'C5' and 'D6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'A3' in user_moves and 'B4'in user_moves and 'C5' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'G1' and 'F2' and 'E3' and 'D4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'G1' in user_moves and 'F2' in user_moves and 'E3' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'F2' and 'E3' and 'D4' and 'C5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'F2' in user_moves and 'E3' in user_moves and 'D4' in user_moves and 'C5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'E3' and 'D4' and 'C5' and 'B6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'E3' in user_moves and 'D4' in user_moves and 'C5' in user_moves and 'B6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'F1' and 'E2' and 'D3' and 'C4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'F1' in user_moves and 'E2' in user_moves and 'D3' in user_moves and 'C4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'E2' and 'D3' and 'C4' and 'B5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'E2' in user_moves and 'D3' in user_moves and 'C4' in user_moves and 'B5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D3' and 'C4' and 'B5' and 'A6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D3' in user_moves and 'C4' in user_moves and 'B5' in user_moves and 'A6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'E1' and 'D2' and 'C3' and 'B4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'E1' in user_moves and 'D2' in user_moves and 'C3' in user_moves and 'B4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D2' and 'C3' and 'B4' and 'A5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D2' in user_moves and 'C3' in user_moves and 'B4' in user_moves and 'A5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'D1' and 'C2' and 'B3' and 'A4' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'D1' in user_moves and 'C2' in user_moves and 'B3' in user_moves and 'A4' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'G2' and 'F3' and 'E4' and 'D5' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'G2' in user_moves and 'F3' in user_moves and 'E4' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'F3' and 'E4' and 'D5' and 'C6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'F3' in user_moves and 'E4' in user_moves and 'D5' in user_moves and 'C6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-
-    elif 'G3' and 'F4' and 'E5' and 'D6' in cpu_moves:
-        gameOverCpu = True
+    
+    elif 'G3' in user_moves and 'F4' in user_moves and 'E5' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
         userTurn = False
         cpuTurn = False
         return True
-    else:
-        gameOverCpu = False
-        return False
 
 
 
@@ -895,13 +888,12 @@ while possible_moves != []:
         
         if userMakeMove in possible_moves:
             user_moves.append(userMakeMove)
-            print(user_moves)
             possible_moves.remove(userMakeMove)
             userTurn = False
             cpuTurn = True
         else:
             continue
-    print(cpuTurn)       
+        
     while cpuTurn == True:
         if WinConditionsCpu() == True:
             print('Game Over, CPU Wins')

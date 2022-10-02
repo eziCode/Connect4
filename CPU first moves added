@@ -1,0 +1,920 @@
+import random
+
+user_moves = []
+cpu_moves = []
+userTurn = False
+cpuTurn = False
+gameOverUser = False
+gameOverCpu = False
+first_move = input("Who goes first P/C? ")
+trueVar = True
+while trueVar:
+    if first_move == 'P' or first_move == 'p' or first_move == 'Player':
+        userTurn = True
+        cpuTurn = False
+        trueVar = False
+    elif first_move == 'C' or first_move == 'c' or first_move == 'CPU':
+        userTurn = False
+        cpuTurn = True
+        trueVar = False
+    else:
+        first_move = input("Who goes first P/C? ")
+
+possible_moves = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6',
+                  'B1', 'B2', 'B3', 'B4', 'B5', 'B6',
+                  'C1', 'C2', 'C3', 'C4', 'C5', 'C6',
+                  'D1', 'D2', 'D3', 'D4', 'D5', 'D6',
+                  'E1', 'E2', 'E3', 'E4', 'E5', 'E6',
+                  'F1', 'F2', 'F3', 'F4', 'F5', 'F6',
+                  'G1', 'G2', 'G3', 'G4', 'G5', 'G6']
+
+def WinConditionsUser():
+    #Ways to win for user
+    if 'A1' in user_moves and 'A2' in user_moves and 'A3' in user_moves and 'A4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A2' in user_moves and 'A3' in user_moves and 'A4' in user_moves and 'A5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A3' in user_moves and 'A4' in user_moves and 'A5' in user_moves and 'A6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    elif 'B1' in user_moves and 'B2' in user_moves and 'B3' in user_moves and 'B4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+        
+    elif 'B2' in user_moves and 'B3' in user_moves and 'B4' in user_moves and 'B5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B3' in user_moves and 'B4' in user_moves and 'B5' in user_moves and 'B6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C1' in user_moves and 'C2' in user_moves and 'C3' in user_moves and 'C4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C2' in user_moves and 'C3' in user_moves and 'C4' in user_moves and 'C5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C3' in user_moves and 'C4' in user_moves and 'C5' in user_moves and 'C6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D1' in user_moves and 'D2' in user_moves and 'D3' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D2' in user_moves and 'D3' in user_moves and 'D4' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D3' in user_moves and 'D4' in user_moves and 'D5' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E1' in user_moves and 'E2' in user_moves and 'E3' in user_moves and 'E4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E2' in user_moves and 'E3' in user_moves and 'E4' in user_moves and 'E5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E3' in user_moves and 'E4' in user_moves and 'E5' in user_moves and 'E6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F1' in user_moves and 'F2' in user_moves and 'F3' in user_moves and 'F4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F2' in user_moves and 'F3' in user_moves and 'F4' in user_moves and 'F5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F3' in user_moves and 'F4'in user_moves and 'F5' in user_moves and 'F6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G1' in user_moves and 'G2' in user_moves and 'G3' in user_moves and 'G4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G2' in user_moves and 'G3' in user_moves and 'G4' in user_moves and 'G5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G3' in user_moves and 'G4' in user_moves and 'G5' in user_moves and 'G6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A1' in user_moves and 'B1' in user_moves and 'C1' in user_moves and 'D1' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B1' in user_moves and 'C1' in user_moves and 'D1' in user_moves and 'E1' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C1' in user_moves and 'D1' in user_moves and 'E1' in user_moves and 'F1' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D1' in user_moves and 'E1' in user_moves and 'F1' in user_moves and 'G1' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A2' in user_moves and 'B2' in user_moves and 'C2' in user_moves and 'D2' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B2' in user_moves and 'C2' in user_moves and 'D2' in user_moves and 'E2' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C2' in user_moves and 'D2' in user_moves and 'E2' in user_moves and 'F2' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D2' in user_moves and 'E2' in user_moves and 'F2' in user_moves and 'G2' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A3' in user_moves and 'B3' in user_moves and 'C3' in user_moves and 'D3' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B3' in user_moves and 'C3' in user_moves and 'D3' in user_moves and 'E3' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C3' in user_moves and 'D3' in user_moves and 'E3' in user_moves and 'F3' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D3' in user_moves and 'E3' in user_moves and 'F3' in user_moves and 'G3' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A4' in user_moves and 'B4' in user_moves and 'C4' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B4' in user_moves and 'C4'in user_moves and 'D4' in user_moves and 'E4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C4' in user_moves and 'D4' in user_moves and 'E4' in user_moves and 'F4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D4' in user_moves and 'E4' in user_moves and 'F4' in user_moves and 'G4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A5' in user_moves and 'B5' in user_moves and 'C5' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B5'in user_moves and 'C5' in user_moves and 'D5' in user_moves and 'E5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C5' in user_moves and 'D5' in user_moves and 'E5' in user_moves and 'F5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D5' in user_moves and 'E5' in user_moves and 'F5' in user_moves and 'G5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A6' in user_moves and 'B6' in user_moves and 'C6' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+    
+    elif 'B6' in user_moves and 'C6' in user_moves and 'D6' in user_moves and 'E6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C6' in user_moves and 'D6' in user_moves and 'E6' in user_moves and 'F6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D6' in user_moves and 'E6' in user_moves and 'F6' in user_moves and 'G6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A1' in user_moves and 'B2' in user_moves and 'C3' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B2' in user_moves and 'C3' in user_moves and 'D4' in user_moves and 'E5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C3' in user_moves and 'D4' in user_moves and 'E5' in user_moves and 'F6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B1' in user_moves and 'C2' in user_moves and 'D3' in user_moves and 'E4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C2' in user_moves and 'D3' in user_moves and 'E4' in user_moves and 'F5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D3' in user_moves and 'E4' in user_moves and 'F5' in user_moves and 'G6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C1' in user_moves and 'D2' in user_moves and 'E3' in user_moves and 'F4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D2' in user_moves and 'E3' in user_moves and 'F4' in user_moves and 'G5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D1' in user_moves and 'E2' in user_moves and 'F3' in user_moves and 'G4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A2' in user_moves and 'B3' in user_moves and 'C4' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B3' in user_moves and 'C4' in user_moves and 'D5' in user_moves and 'E6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A3' in user_moves and 'B4'in user_moves and 'C5' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G1' in user_moves and 'F2' in user_moves and 'E3' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F2' in user_moves and 'E3' in user_moves and 'D4' in user_moves and 'C5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E3' in user_moves and 'D4' in user_moves and 'C5' in user_moves and 'B6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F1' in user_moves and 'E2' in user_moves and 'D3' in user_moves and 'C4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E2' in user_moves and 'D3' in user_moves and 'C4' in user_moves and 'B5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D3' in user_moves and 'C4' in user_moves and 'B5' in user_moves and 'A6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E1' in user_moves and 'D2' in user_moves and 'C3' in user_moves and 'B4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D2' in user_moves and 'C3' in user_moves and 'B4' in user_moves and 'A5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D1' in user_moves and 'C2' in user_moves and 'B3' in user_moves and 'A4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G2' in user_moves and 'F3' in user_moves and 'E4' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F3' in user_moves and 'E4' in user_moves and 'D5' in user_moves and 'C6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G3' in user_moves and 'F4' in user_moves and 'E5' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+
+def WinConditionsCpu():
+    #Ways to win for CPU
+    if 'A1' in user_moves and 'A2' in user_moves and 'A3' in user_moves and 'A4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A2' in user_moves and 'A3' in user_moves and 'A4' in user_moves and 'A5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A3' in user_moves and 'A4' in user_moves and 'A5' in user_moves and 'A6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    elif 'B1' in user_moves and 'B2' in user_moves and 'B3' in user_moves and 'B4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+        
+    elif 'B2' in user_moves and 'B3' in user_moves and 'B4' in user_moves and 'B5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B3' in user_moves and 'B4' in user_moves and 'B5' in user_moves and 'B6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C1' in user_moves and 'C2' in user_moves and 'C3' in user_moves and 'C4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C2' in user_moves and 'C3' in user_moves and 'C4' in user_moves and 'C5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C3' in user_moves and 'C4' in user_moves and 'C5' in user_moves and 'C6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D1' in user_moves and 'D2' in user_moves and 'D3' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D2' in user_moves and 'D3' in user_moves and 'D4' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D3' in user_moves and 'D4' in user_moves and 'D5' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E1' in user_moves and 'E2' in user_moves and 'E3' in user_moves and 'E4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E2' in user_moves and 'E3' in user_moves and 'E4' in user_moves and 'E5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E3' in user_moves and 'E4' in user_moves and 'E5' in user_moves and 'E6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F1' in user_moves and 'F2' in user_moves and 'F3' in user_moves and 'F4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F2' in user_moves and 'F3' in user_moves and 'F4' in user_moves and 'F5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F3' in user_moves and 'F4'in user_moves and 'F5' in user_moves and 'F6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G1' in user_moves and 'G2' in user_moves and 'G3' in user_moves and 'G4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G2' in user_moves and 'G3' in user_moves and 'G4' in user_moves and 'G5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G3' in user_moves and 'G4' in user_moves and 'G5' in user_moves and 'G6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A1' in user_moves and 'B1' in user_moves and 'C1' in user_moves and 'D1' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B1' in user_moves and 'C1' in user_moves and 'D1' in user_moves and 'E1' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C1' in user_moves and 'D1' in user_moves and 'E1' in user_moves and 'F1' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D1' in user_moves and 'E1' in user_moves and 'F1' in user_moves and 'G1' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A2' in user_moves and 'B2' in user_moves and 'C2' in user_moves and 'D2' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B2' in user_moves and 'C2' in user_moves and 'D2' in user_moves and 'E2' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C2' in user_moves and 'D2' in user_moves and 'E2' in user_moves and 'F2' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D2' in user_moves and 'E2' in user_moves and 'F2' in user_moves and 'G2' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A3' in user_moves and 'B3' in user_moves and 'C3' in user_moves and 'D3' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B3' in user_moves and 'C3' in user_moves and 'D3' in user_moves and 'E3' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C3' in user_moves and 'D3' in user_moves and 'E3' in user_moves and 'F3' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D3' in user_moves and 'E3' in user_moves and 'F3' in user_moves and 'G3' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A4' in user_moves and 'B4' in user_moves and 'C4' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B4' in user_moves and 'C4'in user_moves and 'D4' in user_moves and 'E4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C4' in user_moves and 'D4' in user_moves and 'E4' in user_moves and 'F4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D4' in user_moves and 'E4' in user_moves and 'F4' in user_moves and 'G4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A5' in user_moves and 'B5' in user_moves and 'C5' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B5'in user_moves and 'C5' in user_moves and 'D5' in user_moves and 'E5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C5' in user_moves and 'D5' in user_moves and 'E5' in user_moves and 'F5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D5' in user_moves and 'E5' in user_moves and 'F5' in user_moves and 'G5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A6' in user_moves and 'B6' in user_moves and 'C6' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+    
+    elif 'B6' in user_moves and 'C6' in user_moves and 'D6' in user_moves and 'E6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C6' in user_moves and 'D6' in user_moves and 'E6' in user_moves and 'F6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D6' in user_moves and 'E6' in user_moves and 'F6' in user_moves and 'G6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A1' in user_moves and 'B2' in user_moves and 'C3' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B2' in user_moves and 'C3' in user_moves and 'D4' in user_moves and 'E5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C3' in user_moves and 'D4' in user_moves and 'E5' in user_moves and 'F6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B1' in user_moves and 'C2' in user_moves and 'D3' in user_moves and 'E4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C2' in user_moves and 'D3' in user_moves and 'E4' in user_moves and 'F5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D3' in user_moves and 'E4' in user_moves and 'F5' in user_moves and 'G6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'C1' in user_moves and 'D2' in user_moves and 'E3' in user_moves and 'F4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D2' in user_moves and 'E3' in user_moves and 'F4' in user_moves and 'G5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D1' in user_moves and 'E2' in user_moves and 'F3' in user_moves and 'G4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A2' in user_moves and 'B3' in user_moves and 'C4' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'B3' in user_moves and 'C4' in user_moves and 'D5' in user_moves and 'E6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'A3' in user_moves and 'B4'in user_moves and 'C5' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G1' in user_moves and 'F2' in user_moves and 'E3' in user_moves and 'D4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F2' in user_moves and 'E3' in user_moves and 'D4' in user_moves and 'C5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E3' in user_moves and 'D4' in user_moves and 'C5' in user_moves and 'B6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F1' in user_moves and 'E2' in user_moves and 'D3' in user_moves and 'C4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E2' in user_moves and 'D3' in user_moves and 'C4' in user_moves and 'B5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D3' in user_moves and 'C4' in user_moves and 'B5' in user_moves and 'A6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'E1' in user_moves and 'D2' in user_moves and 'C3' in user_moves and 'B4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D2' in user_moves and 'C3' in user_moves and 'B4' in user_moves and 'A5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'D1' in user_moves and 'C2' in user_moves and 'B3' in user_moves and 'A4' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G2' in user_moves and 'F3' in user_moves and 'E4' in user_moves and 'D5' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'F3' in user_moves and 'E4' in user_moves and 'D5' in user_moves and 'C6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+    
+    elif 'G3' in user_moves and 'F4' in user_moves and 'E5' in user_moves and 'D6' in user_moves:
+        gameOverUser = True
+        userTurn = False
+        cpuTurn = False
+        return True
+
+
+
+"""
+1. If AI can win, it should win.
+2. If AI can't win, it should block.
+3. If AI can't win or block, it should make its move in a place to win in 2.
+4. If AI has no where to play for win in 2, make its move for win in 3.
+5. If AI has no where to move for win in 3, AI should play a randomly generated move.
+"""
+def cpu_has_three_needs_1(move):
+    for i in str.split(move):
+        if i.isdigit():
+            splitDigitMove = i
+            return splitDigitMove
+
+def randomLetterNumber():
+    letter = chr(random.randint(ord('A'), ord('G')))
+    number = random.randint(1,6)
+    return letter + str(number)
+
+turn = 0
+while possible_moves != []:
+    while userTurn == True:
+        userMakeMove = input('Possibly Invalid: Where do you want to move?')
+        if WinConditionsUser() == True:
+            print('Game Over, Player Wins')
+            gameOverUser = True
+            if gameOverUser == True:
+                userTurn = False
+                possible_moves.clear()
+                break
+        
+        if userMakeMove in possible_moves:
+            user_moves.append(userMakeMove)
+            possible_moves.remove(userMakeMove)
+            userTurn = False
+            cpuTurn = True
+        else:
+            continue
+        
+    while cpuTurn == True:
+        if WinConditionsCpu() == True:
+            print('Game Over, CPU Wins')
+            gameOverCpu = True
+            if gameOverCpu == True:
+                cpuTurn = False
+                possible_moves.clear()
+                break
+        
+        if turn <= 3:
+            x = randomLetterNumber()
+            if x in possible_moves:
+                cpu_moves.append(x)
+                print(cpu_moves)
+                possible_moves.remove(x)
+                userTurn = True
+                cpuTurn = False
+                turn = turn + 1
+                break
+        else:
+            randomLetterNumber()
+            continue
